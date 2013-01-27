@@ -1,3 +1,12 @@
+/*!
+ * jquery.animateto.js 0.1 - https://github.com/yckart/jquery.animateto.js
+ * Animate/duplicate elements from one place to another one!
+ *
+ * Copyright (c) 2012 Yannick Albert (http://yckart.com)
+ * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
+ * 2013/01/21
+**/
+
 ;(function ($) {
     var supportTransition = (function (a, b) {a = (new Image).style;b = 'ransition';return 't' + b in a || 'webkitT' + b in a || 'MozT' + b in a || 'OT' + b in a;})();
 
