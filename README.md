@@ -1,4 +1,3 @@
-
 ## Usage
 
 It is pretty simple, prepare your markup and initialize "animateTo".
@@ -19,7 +18,7 @@ It is pretty simple, prepare your markup and initialize "animateTo".
 
 
 ## Support
-[@yckart](http://twitter.com/yckart) #fastkey
+[@yckart](http://twitter.com/yckart) #animateTo
 
 [http://yckart.com](http://yckart.com/)
 
