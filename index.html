@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Rosario'>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+
+        <title>animateTo | Animate/duplicate elements from one place to another one!</title>
+    </head>
+
+    <body>
+
+    <h1>jQuery.animateTo.js</h1>
+
+    <hr>
+
+    <h2>Usage</h2>
+
+    <p>It is pretty simple, prepare your markup and initialize "animateTo".</p>
+    <pre><code class="language-javascript">$('.product').animateTo('#cart');</code></pre>
+
+    <hr>
+
+    <h2>Options</h2>
+
+    <ul>
+        <li><pre>clone</pre> Clone the element or use it itself. (default: <code>true</code>)</li>
+        <li><pre>useTransition</pre> Use css3 transitions or jQuery's builtin <code>animate</code>-method.
+            (default: <code>false</code>)</li>
+        <li><pre>duration</pre> The animation speed. (default: <code>900</code>)</li>
+        <li><pre>easing</pre> The easing method you want to use. (default: <code>'swing'</code>)</li>
+        <li><pre>extendAnimation</pre> Object to extend the cloned elements css-styling.
+            (default: <code>{opacity: 0}</code>)</li>
+    </ul>
+    <hr>
+
+    <h2>Demo</h2>
+
+    <div class="product foo">
+        <input type="checkbox">
+         <h4>Foo</h4>
+
+        <img src="http://lorempixel.com/128/64/food/1">
+        <div>13,00 €
+            <input type="button" value="Buy" class="buy">
+        </div>
+    </div>
+    <div class="product bar">
+        <input type="checkbox">
+         <h4>Bar</h4>
+
+        <img src="http://lorempixel.com/128/64/food/2">
+        <div>37,00 €
+            <input type="button" value="Buy" class="buy">
+        </div>
+    </div>
+    <div id="cart">Cart</div>
+
+    <hr>
+
+    <h2>Support</h2>
+    <p>
+        <a href='http://twitter.com/yckart'>@yckart</a> #fastkey<br>
+        <a href='http://yckart.com/'>http://yckart.com</a>
+    </p>
+
+    <h4>License</h4>
+    <tt>
+        <p>Copyright (c) 2012 Yannick Albert (<a href='http://yckart.com/'>http://yckart.com/</a>)</p>
+
+        <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:</p>
+
+        <p>The above copyright notice and this permission notice shall be included in
+            all copies or substantial portions of the Software.</p>
+
+        <p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+            THE SOFTWARE.</p>
+    </tt>
+
+    <script src="https://raw.github.com/LeaVerou/prism/gh-pages/prism.js"></script>
+    <script src='http://code.jquery.com/jquery-1.9.0.min.js'></script>
+    <script src='jquery.animateto.js'></script>
+    <script>
+        $('.product').click(function (e) {
+            if (!$(e.target).is('input')) {
+                $(this).find(':checkbox').prop('checked', !$(this).find(':checkbox').prop('checked'));
+            }
+        });
+        $(function () {
+            $('input.buy').click(function () {
+                $(this).closest('.product').not(':has(:checked)').animateTo('#cart');
+                $('.product').has(':checked').animateTo('#cart');
+            });
+        });
+    </script>
+</body>
+</html>
