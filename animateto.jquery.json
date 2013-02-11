@@ -1,0 +1,31 @@
+{
+    "name": "animateto",
+    "title": "jQuery animateTo",
+    "description": "Animate/duplicate elements from one place to another one!",
+    "keywords": [
+        "animate",
+        "animation",
+        "animateto",
+        "shop",
+        "shopping",
+        "cart"
+    ],
+    "version": "0.0.1",
+    "author": {
+        "name": "Yannick Albert",
+        "url": "https://github.com/yckart"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://yckart.com/mit/"
+        }
+    ],
+    "homepage": "http://yckart.github.com/jquery.animateto.js",
+    "demo": "http://yckart.github.com/jquery.animateto.js",
+    "docs": "https://github.com/yckart/jquery.animateto.js",
+    "bugs": "https://github.com/yckart/jquery.animateto.js/issues",
+    "dependencies": {
+        "jquery": ">=1.6"
+    }
+}
