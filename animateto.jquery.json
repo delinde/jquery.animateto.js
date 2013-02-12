@@ -10,9 +10,10 @@
         "shopping",
         "cart"
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": {
         "name": "Yannick Albert",
+        "email" : "mail@yckart.com",
         "url": "https://github.com/yckart"
     },
     "licenses": [
@@ -26,6 +27,6 @@
     "docs": "https://github.com/yckart/jquery.animateto.js",
     "bugs": "https://github.com/yckart/jquery.animateto.js/issues",
     "dependencies": {
-        "jquery": ">=1.6"
+        "jquery": ">=1.8"
     }
 }
